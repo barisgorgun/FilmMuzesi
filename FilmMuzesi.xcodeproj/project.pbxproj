@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DB59E71FD9EB3B123EEAECB /* Pods_FilmMuzesi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2265A4502152768DEA539D9 /* Pods_FilmMuzesi.framework */; };
 		FAE2A5AD249BEAF600420A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2A5AC249BEAF600420A7B /* AppDelegate.swift */; };
 		FAE2A5AF249BEAF600420A7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2A5AE249BEAF600420A7B /* SceneDelegate.swift */; };
 		FAE2A5B1249BEAF600420A7B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2A5B0249BEAF600420A7B /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		374A5CCE6210CBB96C7C6160 /* Pods-FilmMuzesi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmMuzesi.debug.xcconfig"; path = "Target Support Files/Pods-FilmMuzesi/Pods-FilmMuzesi.debug.xcconfig"; sourceTree = "<group>"; };
+		8FDFCCABB0ECE6C50A9EB642 /* Pods-FilmMuzesi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmMuzesi.release.xcconfig"; path = "Target Support Files/Pods-FilmMuzesi/Pods-FilmMuzesi.release.xcconfig"; sourceTree = "<group>"; };
+		D2265A4502152768DEA539D9 /* Pods_FilmMuzesi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilmMuzesi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE2A5A9249BEAF600420A7B /* FilmMuzesi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmMuzesi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE2A5AC249BEAF600420A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FAE2A5AE249BEAF600420A7B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8DB59E71FD9EB3B123EEAECB /* Pods_FilmMuzesi.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5F8A059D08CD0F6521DA09A0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				374A5CCE6210CBB96C7C6160 /* Pods-FilmMuzesi.debug.xcconfig */,
+				8FDFCCABB0ECE6C50A9EB642 /* Pods-FilmMuzesi.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F36CDBBAF06D59C629C9B489 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D2265A4502152768DEA539D9 /* Pods_FilmMuzesi.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FAE2A5A0249BEAF600420A7B = {
 			isa = PBXGroup;
 			children = (
 				FAE2A5AB249BEAF600420A7B /* FilmMuzesi */,
 				FAE2A5AA249BEAF600420A7B /* Products */,
+				5F8A059D08CD0F6521DA09A0 /* Pods */,
+				F36CDBBAF06D59C629C9B489 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,6 +99,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAE2A5BD249BEAF900420A7B /* Build configuration list for PBXNativeTarget "FilmMuzesi" */;
 			buildPhases = (
+				701BBE08F5C0ADCE5D8B70C1 /* [CP] Check Pods Manifest.lock */,
 				FAE2A5A5249BEAF600420A7B /* Sources */,
 				FAE2A5A6249BEAF600420A7B /* Frameworks */,
 				FAE2A5A7249BEAF600420A7B /* Resources */,
@@ -132,6 +158,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		701BBE08F5C0ADCE5D8B70C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FilmMuzesi-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FAE2A5A5249BEAF600420A7B /* Sources */ = {
@@ -282,6 +333,7 @@
 		};
 		FAE2A5BE249BEAF900420A7B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 374A5CCE6210CBB96C7C6160 /* Pods-FilmMuzesi.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -299,6 +351,7 @@
 		};
 		FAE2A5BF249BEAF900420A7B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8FDFCCABB0ECE6C50A9EB642 /* Pods-FilmMuzesi.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
