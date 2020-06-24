@@ -1,24 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16092.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="afi-an-diW">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16092.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Kategori View Controller-->
+        <scene sceneID="1B9-B7-ShP">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <tableViewController id="afi-an-diW" customClass="KategoriViewController" customModule="FilmMuzesi" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="nrd-EJ-N5z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="kategoriCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="kategoriCell" rowHeight="116" id="ZgL-BE-kW5" customClass="KategoriTableViewCell" customModule="FilmMuzesi" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="116"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ZgL-BE-kW5" id="abS-8Z-ah4">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="116"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ntd-W5-ZSq">
+                                            <rect key="frame" x="20" y="11" width="153.5" height="94"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="ntd-W5-ZSq" secondAttribute="height" multiplier="75:46" id="f1a-oh-zcQ"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYW-Zm-OFH">
+                                            <rect key="frame" x="193.5" y="48" width="180.5" height="20"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="ntd-W5-ZSq" firstAttribute="leading" secondItem="abS-8Z-ah4" secondAttribute="leadingMargin" id="1YD-lg-1Nr"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="IYW-Zm-OFH" secondAttribute="trailing" constant="20" id="9Jh-el-BXV"/>
+                                        <constraint firstItem="ntd-W5-ZSq" firstAttribute="top" secondItem="abS-8Z-ah4" secondAttribute="topMargin" id="Kbo-Bn-bpB"/>
+                                        <constraint firstItem="IYW-Zm-OFH" firstAttribute="top" secondItem="abS-8Z-ah4" secondAttribute="topMargin" constant="37" id="KkR-D6-jP8"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="ntd-W5-ZSq" secondAttribute="bottom" id="SYX-zX-xyC"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="IYW-Zm-OFH" secondAttribute="bottom" constant="37" id="XZg-CS-rTT"/>
+                                        <constraint firstItem="IYW-Zm-OFH" firstAttribute="leading" secondItem="ntd-W5-ZSq" secondAttribute="trailing" constant="20" id="bBo-BO-k40"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageView" destination="ntd-W5-ZSq" id="0YM-RW-NLM"/>
+                                    <outlet property="kategoriImage" destination="ntd-W5-ZSq" id="meD-Sa-8fg"/>
+                                    <outlet property="kayegoriLabel" destination="IYW-Zm-OFH" id="0y2-mE-1uk"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="afi-an-diW" id="vJJ-MC-jo7"/>
+                            <outlet property="delegate" destination="afi-an-diW" id="g8W-Gm-FbK"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcq-oe-T6e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="934.78260869565224" y="114.50892857142857"/>
         </scene>
     </scenes>
 </document>
