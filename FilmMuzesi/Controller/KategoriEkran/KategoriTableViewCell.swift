@@ -26,5 +26,8 @@ class KategoriTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    
+    
 
 }

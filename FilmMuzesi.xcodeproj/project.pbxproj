@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8DB59E71FD9EB3B123EEAECB /* Pods_FilmMuzesi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2265A4502152768DEA539D9 /* Pods_FilmMuzesi.framework */; };
+		B0A00F7624A3D9AC006BE25D /* FilmListesiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A00F7524A3D9AC006BE25D /* FilmListesiTableViewController.swift */; };
+		B0A00F7824A3DCE9006BE25D /* FilmResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A00F7724A3DCE9006BE25D /* FilmResponseModel.swift */; };
+		B0A00F7A24A3E03F006BE25D /* FilmListesiTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A00F7924A3E03F006BE25D /* FilmListesiTableViewCell.swift */; };
 		FAE2A5AD249BEAF600420A7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2A5AC249BEAF600420A7B /* AppDelegate.swift */; };
 		FAE2A5AF249BEAF600420A7B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2A5AE249BEAF600420A7B /* SceneDelegate.swift */; };
 		FAE2A5B1249BEAF600420A7B /* KategoriViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAE2A5B0249BEAF600420A7B /* KategoriViewController.swift */; };
@@ -22,6 +25,9 @@
 /* Begin PBXFileReference section */
 		374A5CCE6210CBB96C7C6160 /* Pods-FilmMuzesi.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmMuzesi.debug.xcconfig"; path = "Target Support Files/Pods-FilmMuzesi/Pods-FilmMuzesi.debug.xcconfig"; sourceTree = "<group>"; };
 		8FDFCCABB0ECE6C50A9EB642 /* Pods-FilmMuzesi.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FilmMuzesi.release.xcconfig"; path = "Target Support Files/Pods-FilmMuzesi/Pods-FilmMuzesi.release.xcconfig"; sourceTree = "<group>"; };
+		B0A00F7524A3D9AC006BE25D /* FilmListesiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListesiTableViewController.swift; sourceTree = "<group>"; };
+		B0A00F7724A3DCE9006BE25D /* FilmResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmResponseModel.swift; sourceTree = "<group>"; };
+		B0A00F7924A3E03F006BE25D /* FilmListesiTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilmListesiTableViewCell.swift; sourceTree = "<group>"; };
 		D2265A4502152768DEA539D9 /* Pods_FilmMuzesi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FilmMuzesi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE2A5A9249BEAF600420A7B /* FilmMuzesi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FilmMuzesi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAE2A5AC249BEAF600420A7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,6 +61,15 @@
 				8FDFCCABB0ECE6C50A9EB642 /* Pods-FilmMuzesi.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		B0A00F7424A3D984006BE25D /* FilmListesi */ = {
+			isa = PBXGroup;
+			children = (
+				B0A00F7524A3D9AC006BE25D /* FilmListesiTableViewController.swift */,
+				B0A00F7924A3E03F006BE25D /* FilmListesiTableViewCell.swift */,
+			);
+			path = FilmListesi;
 			sourceTree = "<group>";
 		};
 		F36CDBBAF06D59C629C9B489 /* Frameworks */ = {
@@ -104,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				FAE2A5CB24A3CAED00420A7B /* KategoriResponseModel.swift */,
+				B0A00F7724A3DCE9006BE25D /* FilmResponseModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -118,6 +134,7 @@
 		FAE2A5C2249BED4900420A7B /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				B0A00F7424A3D984006BE25D /* FilmListesi */,
 				FAE2A5C3249BF32100420A7B /* KategoriEkran */,
 			);
 			path = Controller;
@@ -257,10 +274,13 @@
 			files = (
 				FAE2A5B1249BEAF600420A7B /* KategoriViewController.swift in Sources */,
 				FAE2A5AD249BEAF600420A7B /* AppDelegate.swift in Sources */,
+				B0A00F7A24A3E03F006BE25D /* FilmListesiTableViewCell.swift in Sources */,
+				B0A00F7824A3DCE9006BE25D /* FilmResponseModel.swift in Sources */,
 				FAE2A5CC24A3CAED00420A7B /* KategoriResponseModel.swift in Sources */,
 				FAE2A5C7249BF69F00420A7B /* Request.swift in Sources */,
 				FAE2A5AF249BEAF600420A7B /* SceneDelegate.swift in Sources */,
 				FAE2A5C5249BF34600420A7B /* KategoriTableViewCell.swift in Sources */,
+				B0A00F7624A3D9AC006BE25D /* FilmListesiTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

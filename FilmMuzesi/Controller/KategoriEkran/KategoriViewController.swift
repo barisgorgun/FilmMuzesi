@@ -10,23 +10,46 @@ import UIKit
 
 class KategoriViewController: UITableViewController {
 
+    var response: KategoriResponseModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
         let request = Request()
-        request.getMovieKategori()
+        request.getMovieKategori(completionHandler: { (responseModel,error) in
+            self.response = responseModel
+            self.tableView.reloadData()
+        })
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "kategoriCell") as! KategoriTableViewCell
-        cell.kayegoriLabel.text = "Test"
+        
+        let kategoriName = response?.genres[indexPath.row].name
+        cell.kayegoriLabel.text = kategoriName
+        
+        if let image = UIImage(named: kategoriName!){
+            cell.kategoriImage.image = image
+        }else{
+            cell.kategoriImage.image = UIImage(named: "NoImage")
+        }
+
+        
+        
         return cell
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return response?.genres.count ?? 0
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        // segue
+        // Kategori datası
+        // Data göndermen lazım
+        performSegue(withIdentifier: "showMovies", sender: nil)
     }
 }
 

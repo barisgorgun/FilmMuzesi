@@ -10,9 +10,16 @@ import UIKit
 
 class FilmListesiTableViewController: UITableViewController {
 
+    var response : FilmResponseModel?
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let request = Request()
+        // 27 yerine gerçek data gelmeli
+        request.getMovieList(id: 27) { (responseModel, error) in
+            self.response = responseModel
+            self.tableView.reloadData()
+        }
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -22,25 +29,21 @@ class FilmListesiTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
+ 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return response?.results.count ?? 0
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "filmListesiCell", for: indexPath) as! FilmListesiTableViewCell
 
-        // Configure the cell...
+        cell.title.text = response?.results[indexPath.row].title
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
