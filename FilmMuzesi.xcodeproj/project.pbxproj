@@ -80,6 +80,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		FADC98AD24AE5BBA00DD891F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		FAE2A5A0249BEAF600420A7B = {
 			isa = PBXGroup;
 			children = (
@@ -101,6 +108,7 @@
 		FAE2A5AB249BEAF600420A7B /* FilmMuzesi */ = {
 			isa = PBXGroup;
 			children = (
+				FADC98AD24AE5BBA00DD891F /* Extensions */,
 				FAE2A5C824A3C98100420A7B /* Managers */,
 				FAE2A5C2249BED4900420A7B /* Controller */,
 				FAE2A5C1249BED3F00420A7B /* View */,

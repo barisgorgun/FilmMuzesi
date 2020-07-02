@@ -11,7 +11,7 @@ import UIKit
 class KategoriViewController: UITableViewController {
 
     var response: KategoriResponseModel?
-    
+    var secilenId : Int?
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -49,7 +49,14 @@ class KategoriViewController: UITableViewController {
         // segue
         // Kategori datası
         // Data göndermen lazım
+        
+        secilenId = response?.genres[indexPath.row].id
         performSegue(withIdentifier: "showMovies", sender: nil)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destinationVC = segue.destination as! FilmListesiTableViewController
+        destinationVC.gelenid = secilenId ?? 0
     }
 }
 
